@@ -1,0 +1,8 @@
+com\ishop\sso\controller\RedisController.class
+com\ishop\sso\service\impl\UserServiceImpl.class
+com\ishop\sso\controller\UserController.class
+com\ishop\sso\dao\JedisClient.class
+com\ishop\sso\dao\impl\JedisClientSingle.class
+com\ishop\sso\service\RedisService.class
+com\ishop\sso\service\impl\RedisServiceImpl.class
+com\ishop\sso\service\UserService.class

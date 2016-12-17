@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ishop.myMapper.ItemParam">
+	<select id="itemParamList" parameterType="com.ishop.myMapper.ItemParam">
+   		SELECT a.id,a.item_cat_id,b.`name`,a.param_data,b.created,b.updated FROM 
+		tb_item_param AS a LEFT JOIN tb_item_cat AS b ON(a.item_cat_id=b.id);
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+</mapper>

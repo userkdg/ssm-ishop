@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.isunday</groupId>
+    <artifactId>ishop-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.isunday</groupId>
+  <artifactId>ishop-manager</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <!-- 依赖common工程 -->
+  
+  <dependencies>
+  	<dependency>
+  		 <groupId>com.isunday</groupId>
+		 <artifactId>ishop-common</artifactId>
+		 <version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+  <modules>
+  	<module>ishop-manager-pojo</module>
+  	<module>ishop-manager-mapper</module>
+  	<module>ishop-manager-service</module>
+  	<module>ishop-manager-web</module>
+  </modules>
+  <build>
+  	<!-- 配置插件 -->
+  	<plugins>
+  		<plugin>
+  			<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<configuration>
+					<port>8080</port>
+					<path>/</path>
+					<!-- <url>http://127.0.0.1:8080/manager/text</url>
+					<username>tomcat</username>
+					<password>tomcat</password> -->
+				</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
+  
+</project>
